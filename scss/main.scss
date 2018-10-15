@@ -1,0 +1,132 @@
+@import 'config';
+
+body {
+  height: 2000px;
+}
+header {
+  background: $secondary-color;
+  padding: 20px 0px;
+  .row {
+    text-align: center;
+    img {
+      min-width: 300px;
+    }
+  }
+}
+
+nav {
+  transition: all 1s ease-in-out;
+  .navbar-brand {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+  }
+
+  .brand-fadein {
+    opacity: 1;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $secondary-color;
+        font-family: $main-font;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        transition: all 0.5s ease-in;
+        &:hover {
+          color: $main-color;
+        }
+      }
+
+      .current {
+        color: $main-color;
+      }
+
+      .dropdown-menu {
+        box-shadow: $shadow;
+        .dropdown-item {
+          font-family: $everything;
+          color: $secondary-color;
+          letter-spacing: 3px;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-contain {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.big-img-post {
+  height: 400px;
+  width: 100%;
+  background: url('/dist/img/1post.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.big-post {
+  padding-top: 25px;
+  .container {
+    h5 {
+      font-family: $everything;
+    }
+    .date {
+      font-family: $main-font;
+    }
+  }
+  .middle {
+    height: 300px;
+    display: table;
+    .post-title {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: $blog-title;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.forms {
+  padding: 25px 20px;
+  background: #fac003;
+  h5 {
+    font-family: $everything;
+    text-align: center;
+  }
+
+  form {
+    padding-top: 10%;
+  }
+}
+.middle-contain {
+  margin-bottom: 50px;
+}
+.card {
+  .card-body {
+    h5 {
+      font-family: $everything;
+    }
+    .date {
+      font-family: $main-font;
+    }
+    .post-title {
+      font-family: $blog-title;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+}
+
+@import 'mobil';

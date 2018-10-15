@@ -1,0 +1,57 @@
+// Colors
+$main-color: #d89e04;
+$secondary-color: #231f20;
+
+// Fonts
+$main-font: 'Ubuntu', sans-serif;
+$p-font: 'Roboto', sans-serif;
+$blog-title: 'Playfair Display', serif;
+$everything: 'Merriweather', serif;
+
+// Spans
+$green: green;
+$blue: blue;
+$red: red;
+$yellow: yellow;
+
+.red {
+  color: $red;
+}
+.blue {
+  color: $blue;
+}
+.green {
+  color: $green;
+}
+.yellow {
+  color: $yellow;
+}
+
+// Shadow
+$shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+  0px 18px 23px rgba(0, 0, 0, 0.1);
+// Media Query Mixin
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

@@ -1,0 +1,24 @@
+// Wide Screens
+
+@include mediaXl {
+}
+
+@include mediaLg {
+}
+
+// Tablets
+
+@include mediaMd {
+  .big-post {
+    .container {
+      .post-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Smart Phones
+
+@include mediaSm {
+}

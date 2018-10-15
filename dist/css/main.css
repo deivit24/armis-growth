@@ -1,0 +1,108 @@
+.red {
+  color: red; }
+
+.blue {
+  color: blue; }
+
+.green {
+  color: green; }
+
+.yellow {
+  color: yellow; }
+
+body {
+  height: 2000px; }
+
+header {
+  background: #231f20;
+  padding: 20px 0px; }
+  header .row {
+    text-align: center; }
+    header .row img {
+      min-width: 300px; }
+
+nav {
+  transition: all 1s ease-in-out; }
+  nav .navbar-brand {
+    transition: all 1s ease-in-out;
+    opacity: 0; }
+  nav .brand-fadein {
+    opacity: 1; }
+  nav .dropdown:hover > .dropdown-menu {
+    display: block; }
+  nav .navbar-nav .nav-item .nav-link {
+    color: #231f20;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.5s ease-in; }
+    nav .navbar-nav .nav-item .nav-link:hover {
+      color: #d89e04; }
+  nav .navbar-nav .nav-item .current {
+    color: #d89e04; }
+  nav .navbar-nav .nav-item .dropdown-menu {
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+    nav .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+      font-family: "Merriweather", serif;
+      color: #231f20;
+      letter-spacing: 3px; }
+      nav .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+        color: #d89e04; }
+
+.top-contain {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.big-img-post {
+  height: 400px;
+  width: 100%;
+  background: url("/dist/img/1post.jpeg");
+  background-size: cover;
+  background-position: center; }
+
+.big-post {
+  padding-top: 25px; }
+  .big-post .container h5 {
+    font-family: "Merriweather", serif; }
+  .big-post .container .date {
+    font-family: "Ubuntu", sans-serif; }
+  .big-post .middle {
+    height: 300px;
+    display: table; }
+    .big-post .middle .post-title {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      text-transform: capitalize; }
+
+.forms {
+  padding: 25px 20px;
+  background: #fac003; }
+  .forms h5 {
+    font-family: "Merriweather", serif;
+    text-align: center; }
+  .forms form {
+    padding-top: 10%; }
+
+.middle-contain {
+  margin-bottom: 50px; }
+
+.card .card-body h5 {
+  font-family: "Merriweather", serif; }
+
+.card .card-body .date {
+  font-family: "Ubuntu", sans-serif; }
+
+.card .card-body .post-title {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize; }
+
+@media screen and (max-width: 768px) {
+  .big-post .container .post-title {
+    font-size: 2rem; } }

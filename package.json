@@ -1,0 +1,14 @@
+{
+  "name": "growth_armis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "growth": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "David Salazar",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.4"
+  }
+}
