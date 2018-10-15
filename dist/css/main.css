@@ -103,6 +103,104 @@ nav {
   text-align: center;
   text-transform: capitalize; }
 
+.grid-container .grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px 0; }
+  .grid-container .grid .serv {
+    height: 500px;
+    width: 100%;
+    border: 1px solid black;
+    display: table; }
+    .grid-container .grid .serv:nth-child(1) {
+      transition: all 1s ease-in;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/mill.jpeg);
+      background-size: cover;
+      background-position: top; }
+      .grid-container .grid .serv:nth-child(1):hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/mill.jpeg);
+        background-size: cover;
+        background-position: -200px; }
+        .grid-container .grid .serv:nth-child(1):hover h3 {
+          transition: all 1s ease-in-out;
+          color: #d89e04;
+          font-weight: bold;
+          text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+          .grid-container .grid .serv:nth-child(1):hover h3 .btn {
+            transform: translateY(0px);
+            opacity: 1; }
+    .grid-container .grid .serv:nth-child(2) {
+      transition: all 1s ease-in;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/retire.jpeg);
+      background-size: cover;
+      background-position: top; }
+      .grid-container .grid .serv:nth-child(2):hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/retire.jpeg);
+        background-size: cover;
+        background-position: -200px; }
+        .grid-container .grid .serv:nth-child(2):hover h3 {
+          transition: all 1s ease-in-out;
+          color: #d89e04;
+          font-weight: bold;
+          text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+          .grid-container .grid .serv:nth-child(2):hover h3 .btn {
+            transform: translateY(0px);
+            opacity: 1; }
+    .grid-container .grid .serv:nth-child(3) {
+      transition: all 1s ease-in;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/legacy.jpeg);
+      background-size: cover;
+      background-position: top; }
+      .grid-container .grid .serv:nth-child(3):hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/legacy.jpeg);
+        background-size: cover;
+        background-position: -200px; }
+        .grid-container .grid .serv:nth-child(3):hover h3 {
+          transition: all 1s ease-in-out;
+          color: #d89e04;
+          font-weight: bold;
+          text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+          .grid-container .grid .serv:nth-child(3):hover h3 .btn {
+            transform: translateY(0px);
+            opacity: 1; }
+    .grid-container .grid .serv:nth-child(4) {
+      transition: all 1s ease-in;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/boomer.jpeg);
+      background-size: cover;
+      background-position: top; }
+      .grid-container .grid .serv:nth-child(4):hover {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/boomer.jpeg);
+        background-size: cover;
+        background-position: -200px; }
+        .grid-container .grid .serv:nth-child(4):hover h3 {
+          transition: all 1s ease-in-out;
+          color: #d89e04;
+          font-weight: bold;
+          text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1); }
+          .grid-container .grid .serv:nth-child(4):hover h3 .btn {
+            transform: translateY(0px);
+            opacity: 1; }
+    .grid-container .grid .serv h3 {
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      color: white;
+      font-family: "Playfair Display", serif; }
+      .grid-container .grid .serv h3 .btn {
+        text-align: center;
+        color: white;
+        border: 1px solid white;
+        margin-top: 10px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s ease-in-out; }
+        .grid-container .grid .serv h3 .btn:hover {
+          background: white;
+          color: black; }
+
 @media screen and (max-width: 768px) {
   .big-post .container .post-title {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  .grid-container .grid {
+    grid-template-columns: 1fr; } }

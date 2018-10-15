@@ -16,6 +16,11 @@
       }
     }
   }
+  .grid-container {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 // Smart Phones

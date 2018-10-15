@@ -129,4 +129,144 @@ nav {
   }
 }
 
+.grid-container {
+  .grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 10px 0;
+    .serv {
+      height: 500px;
+      width: 100%;
+      border: 1px solid black;
+      display: table;
+      &:nth-child(1) {
+        transition: all 1s ease-in;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../img/mill.jpeg);
+
+        background-size: cover;
+        background-position: top;
+
+        &:hover {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url(../img/mill.jpeg);
+          background-size: cover;
+          background-position: -200px;
+
+          h3 {
+            transition: all 1s ease-in-out;
+            color: $main-color;
+            font-weight: bold;
+            text-shadow: $shadow;
+            .btn {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        transition: all 1s ease-in;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../img/retire.jpeg);
+
+        background-size: cover;
+        background-position: top;
+
+        &:hover {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url(../img/retire.jpeg);
+          background-size: cover;
+          background-position: -200px;
+
+          h3 {
+            transition: all 1s ease-in-out;
+            color: $main-color;
+            font-weight: bold;
+            text-shadow: $shadow;
+            .btn {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        transition: all 1s ease-in;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../img/legacy.jpeg);
+
+        background-size: cover;
+        background-position: top;
+
+        &:hover {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url(../img/legacy.jpeg);
+          background-size: cover;
+          background-position: -200px;
+
+          h3 {
+            transition: all 1s ease-in-out;
+            color: $main-color;
+            font-weight: bold;
+            text-shadow: $shadow;
+            .btn {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        transition: all 1s ease-in;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../img/boomer.jpeg);
+
+        background-size: cover;
+        background-position: top;
+
+        &:hover {
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url(../img/boomer.jpeg);
+          background-size: cover;
+          background-position: -200px;
+
+          h3 {
+            transition: all 1s ease-in-out;
+            color: $main-color;
+            font-weight: bold;
+            text-shadow: $shadow;
+            .btn {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      h3 {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        color: white;
+        font-family: $blog-title;
+
+        .btn {
+          text-align: center;
+          color: white;
+          border: 1px solid white;
+          margin-top: 10px;
+          opacity: 0;
+          transform: translateY(100px);
+          transition: all 1s ease-in-out;
+          &:hover {
+            background: white;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
 @import 'mobil';
