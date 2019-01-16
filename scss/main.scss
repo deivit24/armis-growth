@@ -1,269 +1,421 @@
 @import 'config';
 
-body {
-  height: 2000px;
-}
 header {
-  background: $secondary-color;
-  padding: 20px 0px;
-  .row {
-    text-align: center;
-    img {
-      min-width: 300px;
+  padding-top: 15px;
+  background: #333;
+  text-align: center;
+  font-family: $robotocon;
+
+  .col {
+    #date {
+      color: white;
+    }
+
+    #MyClockDisplay {
+      color: white;
     }
   }
 }
 
 nav {
-  transition: all 1s ease-in-out;
-  .navbar-brand {
-    transition: all 1s ease-in-out;
-    opacity: 0;
+  img {
+    width: 250px;
   }
 
-  .brand-fadein {
-    opacity: 1;
-  }
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
+  background: #fff !important;
+
   .navbar-nav {
     .nav-item {
       .nav-link {
-        color: $secondary-color;
-        font-family: $main-font;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        transition: all 0.5s ease-in;
+        position: relative;
+        text-decoration: none;
+        color: #333;
+        margin-left: 20px;
+        font-family: $roboto;
+        font-size: 20px;
+        transition: color 0.2s ease;
+        padding: 3px 0;
+
         &:hover {
-          color: $main-color;
-        }
-      }
+          color: $main;
 
-      .current {
-        color: $main-color;
-      }
-
-      .dropdown-menu {
-        box-shadow: $shadow;
-        .dropdown-item {
-          font-family: $everything;
-          color: $secondary-color;
-          letter-spacing: 3px;
-          &:hover {
-            color: $main-color;
+          &::after,
+          &::before {
+            width: 100%;
+            left: 0;
           }
         }
+
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          top: calc(100% + 5px);
+          width: 0;
+          right: 0;
+          height: 3px;
+        }
+
+        &::before {
+          transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+          background: $first1;
+        }
+
+        &::after {
+          transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+          background: $second1;
+        }
+
+
+      }
+
+      .active {
+        color: $main;
       }
     }
   }
+
 }
 
-.top-contain {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.big-img-post {
-  height: 400px;
-  width: 100%;
-  background: url('/dist/img/1post.jpeg');
-  background-size: cover;
-  background-position: center;
-}
+main {
 
-.big-post {
-  padding-top: 25px;
-  .container {
-    h5 {
-      font-family: $everything;
-    }
-    .date {
-      font-family: $main-font;
-    }
-  }
-  .middle {
-    height: 300px;
-    display: table;
-    .post-title {
-      display: table-cell;
-      vertical-align: middle;
-      font-family: $blog-title;
-      font-size: 1.5rem;
-      text-align: center;
-      font-weight: bold;
-      text-transform: capitalize;
-    }
-  }
-}
+  background: #e5ded8;
+  padding: 25px 0px;
 
-.forms {
-  padding: 25px 20px;
-  background: #fac003;
-  h5 {
-    font-family: $everything;
-    text-align: center;
-  }
+  #blog {
+    #recentBlog {
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
-  form {
-    padding-top: 10%;
-  }
-}
-.middle-contain {
-  margin-bottom: 50px;
-}
-.card {
-  .card-body {
-    h5 {
-      font-family: $everything;
-    }
-    .date {
-      font-family: $main-font;
-    }
-    .post-title {
-      font-family: $blog-title;
-      font-weight: bold;
-      font-size: 1.5rem;
-      text-align: center;
-      text-transform: capitalize;
-    }
-  }
-}
-
-.grid-container {
-  .grid {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 10px 0;
-    .serv {
-      height: 500px;
+      font-family: $roboto;
+      font-weight: 100;
       width: 100%;
-      border: 1px solid black;
-      display: table;
-      &:nth-child(1) {
-        transition: all 1s ease-in;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url(../img/mill.jpeg);
 
-        background-size: cover;
-        background-position: top;
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: .25s ease;
 
         &:hover {
-          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url(../img/mill.jpeg);
-          background-size: cover;
-          background-position: -200px;
-
-          h3 {
-            transition: all 1s ease-in-out;
-            color: $main-color;
-            font-weight: bold;
-            text-shadow: $shadow;
-            .btn {
-              transform: translateY(0px);
-              opacity: 1;
-            }
-          }
+          border-color: $second1;
+          color: $second1;
         }
       }
-      &:nth-child(2) {
-        transition: all 1s ease-in;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url(../img/retire.jpeg);
 
+      .blog-cover {
+        background: url("../img/1post.jpeg");
         background-size: cover;
-        background-position: top;
+        background-position: center;
+        border-radius: 5px 5px 0 0;
+        height: 300px;
+        box-shadow: inset hsla(0, 0, 0, .1) 0 64px 64px 16px;
+      }
 
-        &:hover {
-          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url(../img/retire.jpeg);
+      .blog-author {
+        margin: 0 auto;
+        padding-top: .5rem;
+        width: 80%;
+
+        h3::before {
+          background: url("../img/favicon.jpg");
           background-size: cover;
-          background-position: -200px;
+          border-radius: 50%;
+          content: " ";
+          display: inline-block;
+          height: 32px;
+          margin-right: .5rem;
+          position: relative;
+          top: 8px;
+          width: 32px;
+        }
 
-          h3 {
-            transition: all 1s ease-in-out;
-            color: $main-color;
-            font-weight: bold;
-            text-shadow: $shadow;
-            .btn {
-              transform: translateY(0px);
-              opacity: 1;
-            }
-          }
+        h3 {
+          color: #fff;
+          text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
         }
       }
-      &:nth-child(3) {
-        transition: all 1s ease-in;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url(../img/legacy.jpeg);
 
-        background-size: cover;
-        background-position: top;
-
-        &:hover {
-          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url(../img/legacy.jpeg);
-          background-size: cover;
-          background-position: -200px;
-
-          h3 {
-            transition: all 1s ease-in-out;
-            color: $main-color;
-            font-weight: bold;
-            text-shadow: $shadow;
-            .btn {
-              transform: translateY(0px);
-              opacity: 1;
-            }
-          }
-        }
+      .blog-body {
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
       }
-      &:nth-child(4) {
-        transition: all 1s ease-in;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url(../img/boomer.jpeg);
 
-        background-size: cover;
-        background-position: top;
-
-        &:hover {
-          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url(../img/boomer.jpeg);
-          background-size: cover;
-          background-position: -200px;
-
-          h3 {
-            transition: all 1s ease-in-out;
-            color: $main-color;
-            font-weight: bold;
-            text-shadow: $shadow;
-            .btn {
-              transform: translateY(0px);
-              opacity: 1;
-            }
-          }
-        }
-      }
-      h3 {
+      .blog-title {
         text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-        color: white;
-        font-family: $blog-title;
 
-        .btn {
-          text-align: center;
-          color: white;
+        h1 a {
+          color: #333;
+          font-family: $merriweather;
+
+
+          &:hover {
+            border-color: $second1;
+            color: $second1;
+          }
+        }
+      }
+
+      .blog-summary p {
+        color: lighten(#333, 10%);
+        font-family: $roboto;
+      }
+
+      .blog-tag ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .blog-tag li+li {
+        margin-left: .5rem;
+      }
+
+      .blog-tag a {
+        border: 1px solid lighten(#333, 40%);
+        border-radius: 3px;
+        font-family: $robotocon;
+        color: lighten(#333, 40%);
+        font-size: 1rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        transition: all .5s ease-in-out;
+        padding: .25rem .5rem;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        width: 5rem;
+
+        &:hover {
+          color: #333;
+        }
+
+      }
+
+      .mil {
+        background: white;
+        color: $mil !important;
+
+        &:hover {
+          background: $mil;
+          color: white !important;
+        }
+      }
+
+      .blog-footer {
+
+        margin: 0 auto;
+
+
+      }
+
+      .blog-footer ul {
+        list-style: none;
+        display: flex;
+        flex: row wrap;
+        justify-content: flex-end;
+        padding-left: 0;
+      }
+
+      .blog-footer li:first-child {
+        margin-right: auto;
+      }
+
+      .blog-footer li+li {
+        margin-left: .5rem;
+      }
+
+      .blog-footer li {
+        color: lighten(#333, 40%);
+        font-size: .75rem;
+        height: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        position: relative;
+        white-space: nowrap;
+
+        & a {
+          color: lighten(#333, 40%);
+        }
+      }
+
+      .like {
+        margin-right: 1rem;
+
+        i:hover {
+          color: #8b9dc3;
+        }
+      }
+
+      .published-date {
+        border: 1px solid lighten(#333, 40%);
+        border-radius: 3px;
+        padding: 0 .5rem;
+      }
+
+      margin-bottom: 30px;
+    }
+
+    #pastBlogs {
+      margin-bottom: 30px;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/retire.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all .5s ease-in-out;
+
+      .past-title {
+        text-align: center;
+        margin: 70px 0 0 0;
+        transition: all .5s ease-in-out;
+        z-index: 20;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+        h3 {
+          a {
+            text-decoration: none;
+            color: #f4f4f4;
+            font-family: $merriweather;
+            margin-bottom: 0;
+            text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4)
+          }
+
+        }
+
+        hr {
+          width: 50px;
+          height: 3px;
+          margin: 20px auto;
+          border: 0;
+          background: white;
+        }
+
+
+      }
+
+      .card-info {
+        margin-bottom: 25px;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+        transform: translateY(50px);
+
+        a {
           border: 1px solid white;
-          margin-top: 10px;
-          opacity: 0;
-          transform: translateY(100px);
-          transition: all 1s ease-in-out;
+          border-radius: 3px;
+          font-family: $robotocon;
+          color: white;
+          font-size: 1rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+
+          padding: .25rem .5rem;
+          text-align: center;
+          text-transform: uppercase;
+          white-space: nowrap;
+          width: 5rem;
+          text-decoration: none;
+
           &:hover {
             background: white;
-            color: black;
+            color: #333;
+            border: 1px solid #333;
+          }
+
+        }
+      }
+
+      &:hover {
+
+        /* bg-gradient: */
+        background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .5) 21%), url("../img/retire.jpeg");
+        background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .5) 21%), url("../img/retire.jpeg");
+        background-image: -o-linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .5) 21%), url("../img/retire.jpeg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, .5) 21%), url("../img/retire.jpeg");
+        transition: all .5s ease-in-out;
+
+        .card-info {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+
+      }
+
+      .utility-info {
+        color: white;
+        position: relative;
+        bottom: 0;
+
+
+
+      }
+
+      .utility-list {
+        list-style-type: none;
+        margin: 0 0 0px 0px;
+        padding: 0;
+        text-align: left;
+
+        li {
+          margin: 0 15px 0 0;
+          padding: 0 0 0 22px;
+          display: inline-block;
+          color: white;
+          font-family: $robotocon;
+          text-transform: uppercase;
+
+          i {
+            color: $main;
           }
         }
+      }
+
+    }
+
+
+  }
+
+  #side {
+    .card {
+      margin-bottom: 30px;
+
+      .card-body {
+        text-align: center;
+
+        .card-title {
+          text-align: left;
+          font-family: $robotocon;
+          color: black;
+          font-weight: bold;
+        }
+
+        .card-text {
+          text-align: left;
+          font-family: $roboto;
+        }
+
+        .btn {
+          background: $second2;
+          color: white;
+          font-family: $robotocon;
+
+          &:hover {
+            background: $second1;
+          }
+        }
+
       }
     }
   }

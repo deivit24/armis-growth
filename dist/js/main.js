@@ -1,21 +1,39 @@
-// Navbar Brand Fade In
-var navBrand = new ScrollMagic.Controller();
+// Date for Header
 
-var ourScene = new ScrollMagic.Scene({
-  triggerElement: 'nav',
-  triggerHook: 0.05
-})
-  .setClassToggle('.navbar-brand', 'brand-fadein')
-  .addIndicators()
-  .addTo(navBrand);
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
+];
 
-// Nav fixed Top
-var nav = new ScrollMagic.Controller();
+let today = new Date();
+let date = (monthNames[today.getMonth()]) + '-' + today.getDate() + '-' + today.getFullYear();
+let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-var ourScene = new ScrollMagic.Scene({
-  triggerElement: 'nav',
-  triggerHook: 0.09
-})
-  .setClassToggle('nav', 'sticky-top')
-  .addIndicators()
-  .addTo(nav);
+function showTime() {
+  var date = new Date();
+  var h = date.getHours(); // 0 - 23
+  var m = date.getMinutes(); // 0 - 59
+  var s = date.getSeconds(); // 0 - 59
+  var session = "AM";
+
+  if (h == 0) {
+    h = 12;
+  }
+
+  if (h > 12) {
+    h = h - 12;
+    session = "PM";
+  }
+
+  h = (h < 10) ? "0" + h : h;
+  m = (m < 10) ? "0" + m : m;
+  s = (s < 10) ? "0" + s : s;
+
+  var time = h + ":" + m + ":" + s + " " + session;
+  document.getElementById("MyClockDisplay").innerText = time;
+  document.getElementById("MyClockDisplay").textContent = time;
+  setTimeout(showTime, 1000);
+
+}
+showTime();
+
+document.getElementById('date').innerHTML = date;

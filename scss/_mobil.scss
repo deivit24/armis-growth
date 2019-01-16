@@ -1,29 +1,17 @@
 // Wide Screens
 
-@include mediaXl {
-}
+@include mediaXl {}
 
-@include mediaLg {
-}
+@include mediaLg {}
 
 // Tablets
 
 @include mediaMd {
-  .big-post {
-    .container {
-      .post-title {
-        font-size: 2rem;
-      }
-    }
-  }
-  .grid-container {
-    .grid {
-      grid-template-columns: 1fr;
-    }
+  #subForm {
+    display: none;
   }
 }
 
 // Smart Phones
 
-@include mediaSm {
-}
+@include mediaSm {}

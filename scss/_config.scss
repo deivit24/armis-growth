@@ -1,36 +1,25 @@
-// Colors
-$main-color: #d89e04;
-$secondary-color: #231f20;
-
 // Fonts
-$main-font: 'Ubuntu', sans-serif;
-$p-font: 'Roboto', sans-serif;
-$blog-title: 'Playfair Display', serif;
-$everything: 'Merriweather', serif;
+$merriweather: 'Merriweather',
+serif;
+$raleway: 'Raleway',
+sans-serif;
+$lato: 'Lato',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;
+$robotocon: 'Roboto Condensed',
+sans-serif;
+$ubuntu: 'Ubuntu',
+sans-serif;
 
-// Spans
-$green: green;
-$blue: blue;
-$red: red;
-$yellow: yellow;
+// Colors
+$main:#D89E04;
+$first1:#FFC21E;
+$second1:#00228B;
+$first2:#8B6601;
+$second2:#0437D8;
+$mil: #0B6623;
 
-.red {
-  color: $red;
-}
-.blue {
-  color: $blue;
-}
-.green {
-  color: $green;
-}
-.yellow {
-  color: $yellow;
-}
-
-// Shadow
-$shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
-  0px 18px 23px rgba(0, 0, 0, 0.1);
-// Media Query Mixin
 
 @mixin mediaSm {
   @media screen and (max-width: 500px) {

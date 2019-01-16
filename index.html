@@ -1,291 +1,202 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap 4.2 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-    crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/main.css" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display|Roboto|Ubuntu" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Raleway|Roboto|Roboto+Condensed|Ubuntu"
+      rel="stylesheet"
+    />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="dist/css/main.css">
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="dist/img/faviconico.png"
+      type="image/x-icon"
+    />
 
-  <title>Armis Growth | Financial Clarity For All</title>
-  <link rel="shortcut icon" type="image" href="dist/img/faviconico.png">
-</head>
+    <title>Armis Growth | Financial Clarity For Millennials</title>
+  </head>
 
-<body>
-  <header>
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <img src="dist/img/armiswihite.png" alt="" class="img-fluid">
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col"><p id="date"></p></div>
+
+          <div class="col"><p id="MyClockDisplay"></p></div>
+        </div>
       </div>
-      <div class="col-md-4"></div>
-    </div>
-  </header>
+    </header>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
       <a class="navbar-brand" href="#">
-        <img src="dist/img/bull-logo.png" width="75">
+        <img src="dist/img/armisblack.png" alt="" />
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#armisGrowthNav"
+        aria-controls="armisGrowthNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon "></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-        <ul class="navbar-nav">
+      <div
+        class="collapse navbar-collapse justify-content-md-center "
+        id="armisGrowthNav"
+      >
+        <ul class="navbar-nav ">
+          <li class="nav-item ">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Start Here</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
           <li class="nav-item">
-            <a class="nav-link current " href="#">Home</a>
+            <a class="nav-link" href="#">Wealth Management</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Start Here</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link " href="" id="accumilationdropdown" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Accumulation</a>
-            <div class="dropdown-menu" aria-labelledby="accumilationdropdown">
-              <a class="dropdown-item" href="accumulation/millennials/millenials.html">Millennials</a>
-              <a class="dropdown-item" href="accumulation/generation-x/gen-x.html">Generation X</a>
-              <a class="dropdown-item" href="accumulation/baby-boomers/baby-boomers.html">Baby Boomers</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link " href="preservation/preservation.html" id="preservationdropdown" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Preservation</a>
-            <div class="dropdown-menu" aria-labelledby="preservationdropdown">
-              <a class="dropdown-item" href="preservation/pre-retirment/pre-retirement.html">Pre-Retirement</a>
-              <a class="dropdown-item" href="preservation/retirement/retirement.html">Retirement</a>
-              <a class="dropdown-item" href="preservation/legacy/legacy.html">Legacy</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link " href="" id="fpdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Financial
-              Planning</a>
-            <div class="dropdown-menu" aria-labelledby="fpdropdown">
-              <a class="dropdown-item" href="#">Budgeting</a>
-              <a class="dropdown-item" href="#">Debt Management</a>
-              <a class="dropdown-item" href="#">Taxes</a>
-              <a class="dropdown-item disabled" href="#">Insurance (Coming Soon)</a>
-            </div>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
-
-  <div class="container top-contain">
-    <div class="row mb-2">
-      <div class="col-md-8">
+      <form id="subForm" class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="email"
+          placeholder="email"
+          aria-label="email"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Subscribe
+        </button>
+      </form>
+    </nav>
+    <main>
+      <div class="container">
         <div class="row">
-          <div class="col-md-8 big-img-post">
-
-          </div>
-          <div class="col-md-4 big-post">
-            <div class="container ">
-              <h5><span class="blue">Millennials</span></h5>
-              <p class="date">October 15th 2018</p>
+          <div id="blog" class="col-md-8">
+            <div id="recentBlog">
+              <div class="blog-header">
+                <div class="blog-cover">
+                  <div class="blog-author"><h3>David Salazar</h3></div>
+                </div>
+              </div>
+              <div class="blog-body">
+                <div class="blog-title">
+                  <h1><a href="">Fixed Income Strategy</a></h1>
+                </div>
+                <div class="blog-summary">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Soluta beatae enim eius laboriosam at, autem, tenetur neque
+                    blanditiis aperiam quia, voluptate obcaecati possimus sit
+                    ea. Expedita maxime nemo praesentium assumenda!
+                  </p>
+                </div>
+                <div class="blog-tag">
+                  <ul>
+                    <li><a href="" class="mil">Millennials</a></li>
+                    <li><a href="">Read More</a></li>
+                  </ul>
+                </div>
+                <hr />
+                <div class="blog-footer">
+                  <ul>
+                    <li class="published-date">
+                      <i class="far fa-calendar-alt"></i> January 4th
+                    </li>
+                    <li class="like">
+                      <a href=""> <i class="far fa-thumbs-up fa-2x"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="container middle">
-              <p class="post-title">Roth or Traditional? <br>
-                3 Reasons why having both will benefit you now</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 forms">
-        <h5>Be up to date with our latest Growth Tips</h5>
-        <form>
-
-          <br>
-          <div class="form-group">
-            <label for="Email">Email address</label>
-            <input type="email" class="form-control" id="Email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid middle-contain">
-    <div class="row mb-2">
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="blue">Retirement</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">How to put your excess cash to work</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="green">Accumulation</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">What is the key to consistant investing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="blue">Retirement</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">Inherited an IRA? What should you do?</p>
+            <div id="pastBlogs">
+              <div class="past-title">
+                <h3>
+                  <a href="">Difference Between Roth and Traditional IRA</a>
+                </h3>
+                <hr />
+              </div>
+              <div class="card-info"><a href="">Read More</a></div>
+              <div class="utility-info">
+                <ul class="utility-list">
+                  <li class="like">
+                    <a href=""> <i class="far fa-thumbs-up "></i></a>
+                  </li>
+                  <li class="date">
+                    <i class="far fa-calendar-alt"></i> 03.12.2015
+                  </li>
+                  <li><p class="retire">Retirement</p></li>
+                </ul>
+              </div>
+              <!-- overlays -->
+              <div class="gradient-overlay"></div>
+              <div class="color-overlay"></div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="green">Accumulation</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">Newer Investors shouldn't panic</p>
+          <div id="side" class="col-md-4">
+            <div class="card" style="width: 100%;">
+              <img src="dist/img/mill.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">David Salazar, MSc</h5>
+                <p class="card-text">
+                  I'm a Austin, TX-based financial advisor and principal owner
+                  of Armis Financial LLC. I help people invest and manage
+                  portfolios for them.
+                </p>
+                <a href="#" class="btn ">Learn More</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container-fluid middle-contain">
-    <div class="row mb-2">
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="blue">Retirement</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">How to put your excess cash to work</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="green">Accumulation</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">What is the key to consistant investing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="blue">Retirement</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">Inherited an IRA? What should you do?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="card">
-          <img class="card-img-top" src="dist/img/2post.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="container ">
-              <h5><span class="green">Accumulation</span> </h5>
-              <p class="date">October 15th 2018</p>
-            </div>
-            <div class="container ">
-              <p class="post-title">Newer Investors shouldn't panic</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </main>
 
-  <div class="container-fluid grid-container">
-    <div class="grid">
-      <div class="serv">
-        <h3>Millennials <br>
-          <a href="" class="btn">Read More</a></h3>
-      </div>
-      <div class="serv">
-        <h3>Retirement <br>
-          <a href="" class="btn">Read More</a></h3>
-      </div>
-      <div class="serv">
-        <h3>Legacy <br>
-          <a href="" class="btn">Read More</a></h3>
-      </div>
-      <div class="serv">
-        <h3>Baby Boomers <br>
-          <a href="" class="btn">Read More</a></h3>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-
-  <!-- Scroll Magic -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/ScrollToPlugin.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js
-    "></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
-  <!-- Custom JavaScript -->
-  <script src="dist/js/main.js"></script>
-</body>
-
+    <!-- Bootstrap Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JavaScript -->
+    <script src="dist/js/main.js"></script>
+  </body>
 </html>
