@@ -101,66 +101,8 @@
       <div class="container">
         <div class="row">
           <div id="blog" class="col-md-8">
-            <div id="recentBlog">
-              <div class="blog-header">
-                <div class="blog-cover">
-                  <div class="blog-author"><h3>David Salazar</h3></div>
-                </div>
-              </div>
-              <div class="blog-body">
-                <div class="blog-title">
-                  <h1><a href="">Fixed Income Strategy</a></h1>
-                </div>
-                <div class="blog-summary">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Soluta beatae enim eius laboriosam at, autem, tenetur neque
-                    blanditiis aperiam quia, voluptate obcaecati possimus sit
-                    ea. Expedita maxime nemo praesentium assumenda!
-                  </p>
-                </div>
-                <div class="blog-tag">
-                  <ul>
-                    <li><a href="" class="mil">Millennials</a></li>
-                    <li><a href="">Read More</a></li>
-                  </ul>
-                </div>
-                <hr />
-                <div class="blog-footer">
-                  <ul>
-                    <li class="published-date">
-                      <i class="far fa-calendar-alt"></i> January 4th
-                    </li>
-                    <li class="like">
-                      <a href=""> <i class="far fa-thumbs-up fa-2x"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div id="pastBlogs">
-              <div class="past-title">
-                <h3>
-                  <a href="">Difference Between Roth and Traditional IRA</a>
-                </h3>
-                <hr />
-              </div>
-              <div class="card-info"><a href="">Read More</a></div>
-              <div class="utility-info">
-                <ul class="utility-list">
-                  <li class="like">
-                    <a href=""> <i class="far fa-thumbs-up "></i></a>
-                  </li>
-                  <li class="date">
-                    <i class="far fa-calendar-alt"></i> 03.12.2015
-                  </li>
-                  <li><p class="retire">Retirement</p></li>
-                </ul>
-              </div>
-              <!-- overlays -->
-              <div class="gradient-overlay"></div>
-              <div class="color-overlay"></div>
-            </div>
+            <div id="recentBlog"></div>
+            <div id="pastBlogs"></div>
           </div>
           <div id="side" class="col-md-4">
             <div class="card" style="width: 100%;">
@@ -175,6 +117,33 @@
                 <a href="#" class="btn ">Learn More</a>
               </div>
             </div>
+            <form>
+              <h4>Want to subscribe to free weekly updates..</h4>
+              <div class="form-group">
+                <label for="subForm2">Please Enter Your Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="subForm2"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                  required
+                  name="email subscriber"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <small id="emailHelp" class="form-text text-muted"
+                >We'll never share your email with anyone else.</small
+              >
+            </form>
+            <a href="https://armisfinancial.com" target="_blank">
+              <div id="armisfin">
+                <img src="dist/img/1armis.png" alt="" />
+                <h3>Welcome To <span> Financial Clarity</span></h3>
+                <p>A smarter approach to your financial future</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -198,5 +167,6 @@
     ></script>
     <!-- Custom JavaScript -->
     <script src="dist/js/main.js"></script>
+    <script src="dist/js/posts.js"></script>
   </body>
 </html>

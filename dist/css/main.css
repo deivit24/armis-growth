@@ -56,58 +56,42 @@ main {
     main #blog #recentBlog a {
       color: #333;
       text-decoration: none;
-      transition: .25s ease; }
+      transition: 0.25s ease; }
       main #blog #recentBlog a:hover {
         border-color: #00228B;
         color: #00228B; }
     main #blog #recentBlog .blog-cover {
-      background: url("../img/1post.jpeg");
-      background-size: cover;
-      background-position: center;
-      border-radius: 5px 5px 0 0;
-      height: 300px;
-      box-shadow: inset rgba(0, 0, 0, 0.1) 0 64px 64px 16px; }
-    main #blog #recentBlog .blog-author {
-      margin: 0 auto;
-      padding-top: .5rem;
-      width: 80%; }
-      main #blog #recentBlog .blog-author h3::before {
-        background: url("../img/favicon.jpg");
-        background-size: cover;
-        border-radius: 50%;
-        content: " ";
-        display: inline-block;
-        height: 32px;
-        margin-right: .5rem;
-        position: relative;
-        top: 8px;
-        width: 32px; }
-      main #blog #recentBlog .blog-author h3 {
-        color: #fff;
-        text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4); }
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      height: 400px;
+      border-radius: 5px; }
+      main #blog #recentBlog .blog-cover img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+        filter: brightness(80%); }
     main #blog #recentBlog .blog-body {
       margin: 0 auto;
       width: 100%;
       padding: 20px; }
     main #blog #recentBlog .blog-title {
-      text-align: center; }
+      text-align: center;
+      padding: 50px 0px; }
       main #blog #recentBlog .blog-title h1 a {
         color: #333;
         font-family: "Merriweather", serif; }
         main #blog #recentBlog .blog-title h1 a:hover {
           border-color: #00228B;
           color: #00228B; }
-    main #blog #recentBlog .blog-summary p {
-      color: #4d4d4d;
-      font-family: "Roboto", sans-serif; }
     main #blog #recentBlog .blog-tag ul {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       list-style: none;
-      padding-left: 0; }
+      padding-left: 0;
+      justify-content: center; }
     main #blog #recentBlog .blog-tag li + li {
-      margin-left: .5rem; }
+      margin-left: 0.5rem; }
     main #blog #recentBlog .blog-tag a {
       border: 1px solid #999999;
       border-radius: 3px;
@@ -116,14 +100,14 @@ main {
       font-size: 1rem;
       height: 1.5rem;
       line-height: 1.5rem;
-      transition: all .5s ease-in-out;
-      padding: .25rem .5rem;
+      transition: all 0.5s ease-in-out;
+      padding: 0.25rem 0.5rem;
       text-align: center;
       text-transform: uppercase;
       white-space: nowrap;
       width: 5rem; }
       main #blog #recentBlog .blog-tag a:hover {
-        color: #333; }
+        color: #00228B; }
     main #blog #recentBlog .mil {
       background: white;
       color: #0B6623 !important; }
@@ -136,15 +120,17 @@ main {
       list-style: none;
       display: flex;
       flex: row wrap;
-      justify-content: flex-end;
+      justify-content: center;
       padding-left: 0; }
-    main #blog #recentBlog .blog-footer li:first-child {
+    main #blog #recentBlog .blog-footer li:nth-child(2) {
       margin-right: auto; }
+    main #blog #recentBlog .blog-footer li:last-child {
+      margin-right: 5px; }
     main #blog #recentBlog .blog-footer li + li {
-      margin-left: .5rem; }
+      margin-left: 0.5rem; }
     main #blog #recentBlog .blog-footer li {
       color: #999999;
-      font-size: .75rem;
+      font-size: 0.75rem;
       height: 1.5rem;
       letter-spacing: 1px;
       line-height: 1.5rem;
@@ -161,8 +147,13 @@ main {
     main #blog #recentBlog .published-date {
       border: 1px solid #999999;
       border-radius: 3px;
-      padding: 0 .5rem; }
-  main #blog #pastBlogs {
+      padding: 0 0.5rem; }
+    main #blog #recentBlog .author {
+      border: 1px solid #999999;
+      border-radius: 3px;
+      padding: 0 0.5rem; }
+  main #blog .pastBlogs {
+    transition: all .5s ease-in-out;
     margin-bottom: 30px;
     width: 100%;
     height: 300px;
@@ -170,37 +161,45 @@ main {
     border-radius: 10px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/retire.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all .5s ease-in-out; }
-    main #blog #pastBlogs .past-title {
+    position: relative;
+    transition: all 0.5s ease-in-out; }
+    main #blog .pastBlogs img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%); }
+    main #blog .pastBlogs .past-title {
       text-align: center;
-      margin: 70px 0 0 0;
-      transition: all .5s ease-in-out;
+      margin: 0;
+      transition: all 0.5s ease-in-out;
       z-index: 20;
       width: 100%;
       top: 0;
-      left: 0; }
-      main #blog #pastBlogs .past-title h3 a {
+      left: 0;
+      position: absolute;
+      height: 175px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      main #blog .pastBlogs .past-title h3 a {
         text-decoration: none;
         color: #f4f4f4;
         font-family: "Merriweather", serif;
         margin-bottom: 0;
-        text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4); }
-      main #blog #pastBlogs .past-title hr {
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4); }
+      main #blog .pastBlogs .past-title hr {
         width: 50px;
         height: 3px;
-        margin: 20px auto;
+        margin: 10px auto 0px auto;
         border: 0;
         background: white; }
-    main #blog #pastBlogs .card-info {
-      margin-bottom: 25px;
-      opacity: 0;
-      transition: all .5s ease-in-out;
-      transform: translateY(50px); }
-      main #blog #pastBlogs .card-info a {
+    main #blog .pastBlogs .card-info {
+      width: 100%;
+      top: 200px;
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      text-align: center; }
+      main #blog .pastBlogs .card-info a {
         border: 1px solid white;
         border-radius: 3px;
         font-family: "Roboto Condensed", sans-serif;
@@ -208,46 +207,40 @@ main {
         font-size: 1rem;
         height: 1.5rem;
         line-height: 1.5rem;
-        padding: .25rem .5rem;
+        padding: 0.25rem 0.5rem;
         text-align: center;
         text-transform: uppercase;
         white-space: nowrap;
         width: 5rem;
         text-decoration: none; }
-        main #blog #pastBlogs .card-info a:hover {
+        main #blog .pastBlogs .card-info a:hover {
           background: white;
           color: #333;
           border: 1px solid #333; }
-    main #blog #pastBlogs:hover {
-      /* bg-gradient: */
-      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 21%), url("../img/retire.jpeg");
-      background-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 21%), url("../img/retire.jpeg");
-      background-image: -o-linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 21%), url("../img/retire.jpeg");
-      background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 21%), url("../img/retire.jpeg");
-      transition: all .5s ease-in-out; }
-      main #blog #pastBlogs:hover .card-info {
-        transform: translateY(0px);
-        opacity: 1; }
-    main #blog #pastBlogs .utility-info {
+    main #blog .pastBlogs .utility-info {
       color: white;
-      position: relative;
+      position: absolute;
       bottom: 0; }
-    main #blog #pastBlogs .utility-list {
+    main #blog .pastBlogs .utility-list {
       list-style-type: none;
       margin: 0 0 0px 0px;
       padding: 0;
       text-align: left; }
-      main #blog #pastBlogs .utility-list li {
+      main #blog .pastBlogs .utility-list li {
         margin: 0 15px 0 0;
         padding: 0 0 0 22px;
         display: inline-block;
         color: white;
         font-family: "Roboto Condensed", sans-serif;
         text-transform: uppercase; }
-        main #blog #pastBlogs .utility-list li i {
+        main #blog .pastBlogs .utility-list li i {
           color: #D89E04; }
+    main #blog .pastBlogs:hover img {
+      filter: brightness(50%); }
   main #side .card {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px; }
     main #side .card .card-body {
       text-align: center; }
       main #side .card .card-body .card-title {
@@ -261,9 +254,63 @@ main {
       main #side .card .card-body .btn {
         background: #0437D8;
         color: white;
-        font-family: "Roboto Condensed", sans-serif; }
+        font-family: "Roboto Condensed", sans-serif;
+        width: 100%; }
         main #side .card .card-body .btn:hover {
           background: #00228B; }
+  main #side form {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 30px;
+    background: #D89E04;
+    margin-bottom: 30px;
+    border-radius: 25px; }
+    main #side form h4 {
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: bold;
+      color: white; }
+    main #side form label {
+      color: white; }
+    main #side form small {
+      color: white !important; }
+    main #side form .btn-primary {
+      background: #0437D8;
+      font-family: "Roboto Condensed", sans-serif; }
+      main #side form .btn-primary:hover {
+        background: #00228B; }
+  main #side a {
+    text-decoration: none; }
+  main #side #armisfin {
+    background: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)), url(../img/austin.jpg);
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    border-radius: 25px;
+    text-decoration: none; }
+    main #side #armisfin:hover {
+      filter: brightness(80%); }
+    main #side #armisfin img {
+      width: 100%;
+      margin-top: 25px; }
+    main #side #armisfin h3 {
+      text-align: center;
+      text-decoration: none;
+      color: #D89E04;
+      font-size: 2.5rem;
+      margin-top: 20px;
+      font-family: "Ubuntu", sans-serif; }
+      main #side #armisfin h3 span {
+        color: white; }
+    main #side #armisfin p {
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      margin-top: 15px;
+      font-family: "Ubuntu", sans-serif; }
 
 @media screen and (max-width: 768px) {
   #subForm {
