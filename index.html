@@ -1,172 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Bootstrap 4.2 -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="dist/css/main.css" />
+  <!-- Bootstrap 4.2 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous" />
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="dist/css/main.css" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Raleway|Roboto|Roboto+Condensed|Ubuntu"
-      rel="stylesheet"
-    />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous" />
 
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="dist/img/faviconico.png"
-      type="image/x-icon"
-    />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Raleway|Roboto|Roboto+Condensed|Ubuntu" rel="stylesheet" />
 
-    <title>Armis Growth | Financial Clarity For Millennials</title>
-  </head>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="dist/img/faviconico.png" type="image/x-icon" />
 
-  <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col"><p id="date"></p></div>
+  <title>Armis Growth | Financial Clarity For Millennials</title>
+</head>
 
-          <div class="col"><p id="MyClockDisplay"></p></div>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p id="date"></p>
+        </div>
+
+        <div class="col">
+          <p id="MyClockDisplay"></p>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-      <a class="navbar-brand" href="#">
-        <img src="dist/img/armisblack.png" alt="" />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#armisGrowthNav"
-        aria-controls="armisGrowthNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon "></span>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <a class="navbar-brand" href="#">
+      <img src="dist/img/armisblack.png" alt="" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#armisGrowthNav" aria-controls="armisGrowthNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-md-center " id="armisGrowthNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item ">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Start Here</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Wealth Management</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <form id="subForm" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="email" placeholder="email" aria-label="email" />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Subscribe
       </button>
-
-      <div
-        class="collapse navbar-collapse justify-content-md-center "
-        id="armisGrowthNav"
-      >
-        <ul class="navbar-nav ">
-          <li class="nav-item ">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Start Here</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Wealth Management</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
-        </ul>
-      </div>
-      <form id="subForm" class="form-inline my-2 my-lg-0">
-        <input
-          class="form-control mr-sm-2"
-          type="email"
-          placeholder="email"
-          aria-label="email"
-        />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Subscribe
-        </button>
-      </form>
-    </nav>
-    <main>
-      <div class="container">
-        <div class="row">
-          <div id="blog" class="col-md-8">
-            <div id="recentBlog"></div>
-            <div id="pastBlogs"></div>
-          </div>
-          <div id="side" class="col-md-4">
-            <div class="card" style="width: 100%;">
-              <img src="dist/img/mill.jpeg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">David Salazar, MSc</h5>
-                <p class="card-text">
-                  I'm a Austin, TX-based financial advisor and principal owner
-                  of Armis Financial LLC. I help people invest and manage
-                  portfolios for them.
-                </p>
-                <a href="#" class="btn ">Learn More</a>
-              </div>
+    </form>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div id="blog" class="col-md-8">
+          <div id="recentBlog"></div>
+          <div id="pastBlogs"></div>
+        </div>
+        <div id="side" class="col-md-4">
+          <div class="card" style="width: 100%;">
+            <img src="dist/img/bio.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">David Salazar, MSc</h5>
+              <p class="card-text">
+                I'm a Austin, TX-based financial advisor and principal owner
+                of Armis Financial LLC. I help people invest and manage
+                portfolios for them.
+              </p>
+              <a href="#" class="btn ">Learn More</a>
             </div>
-            <form>
-              <h4>Want to subscribe to free weekly updates..</h4>
-              <div class="form-group">
-                <label for="subForm2">Please Enter Your Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="subForm2"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  required
-                  name="email subscriber"
-                />
-              </div>
-
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <small id="emailHelp" class="form-text text-muted"
-                >We'll never share your email with anyone else.</small
-              >
-            </form>
-            <a href="https://armisfinancial.com" target="_blank">
-              <div id="armisfin">
-                <img src="dist/img/1armis.png" alt="" />
-                <h3>Welcome To <span> Financial Clarity</span></h3>
-                <p>A smarter approach to your financial future</p>
-              </div>
-            </a>
           </div>
+          <form>
+            <h4>Want to subscribe to free weekly updates..</h4>
+            <div class="form-group">
+              <label for="subForm2">Please Enter Your Email address</label>
+              <input type="email" class="form-control" id="subForm2" aria-describedby="emailHelp" placeholder="Enter email"
+                required name="email subscriber" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </form>
+          <a href="https://armisfinancial.com" target="_blank">
+            <div id="armisfin">
+              <img src="dist/img/1armis.png" alt="" />
+              <h3>Welcome To <span> Financial Clarity</span></h3>
+              <p>A smarter approach to your financial future</p>
+            </div>
+          </a>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Bootstrap Scripts -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Custom JavaScript -->
-    <script src="dist/js/main.js"></script>
-    <script src="dist/js/posts.js"></script>
-  </body>
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <!-- Custom JavaScript -->
+  <script src="dist/js/main.js"></script>
+  <script src="dist/js/posts.js"></script>
+</body>
+
 </html>
